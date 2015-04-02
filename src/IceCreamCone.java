@@ -19,7 +19,7 @@ public class IceCreamCone {
 		
 		if(scoops > 3)
 		{
-		throw(new IceCreamConeException(scoops));
+			throw(new IceCreamConeException(scoops));
 		}
 		else {
 			this.scoops = scoops;

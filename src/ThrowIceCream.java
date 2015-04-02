@@ -1,11 +1,28 @@
+import java.util.Scanner;
+
 
 public class ThrowIceCream {
 
 	public static void main(String[] args) throws IceCreamConeException {
 		
-		IceCreamCone icecream = new IceCreamCone("Chocolate", 4);
+		Scanner key = new Scanner(System.in);
 		
-		System.out.print("Its working if this displays");
+		String flav = null;
+		int numScoops = 0;
+		
+	
+		
+		
+		System.out.print("What flavor would you like: ");
+		flav = key.nextLine();
+		
+		System.out.print("\nHow many scoops? :");
+		numScoops = key.nextInt();
+		
+		IceCreamCone icecream = new IceCreamCone(flav, numScoops);
+		
+		System.out.print("\n\nThank You");
+
 		
 
 	}
