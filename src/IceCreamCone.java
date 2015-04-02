@@ -19,17 +19,17 @@ public class IceCreamCone {
 		
 		if(scoops > 3)
 		{
-			throw(new IceCreamConeException(scoops));
+			throw new IceCreamConeException(scoops);
 		}
 		else {
 			this.scoops = scoops;
 		}
 	}
 	
-	public void setFlavor(String flavor)
+	public void setFlavor(String flavor) throws IceCreamConeException
 	{
-		
-		this.flavor = flavor;
+		IceCreamCone2 ice = new IceCreamCone2(flavor);
+			
 	}
 
 }
