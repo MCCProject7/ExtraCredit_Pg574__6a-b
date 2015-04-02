@@ -4,22 +4,32 @@ public class IceCreamCone {
 	String flavor; 	
 	int scoops;
 	
-	public IceCreamCone() throws IceCreamConeException{
-		
-		setFlavor(flavor);
+	public IceCreamCone(String flav, int scoops) throws IceCreamConeException
+	{
 		setScoops(scoops);
+		setFlavor(flav);
 		
-	
 	}
 	
-	public void setFlavor(String flavor){
+	
+	
+	
+	public void setScoops(int scoops)  throws IceCreamConeException
+	{
+		
+		if(scoops > 3)
+		{
+		throw(new IceCreamConeException(scoops));
+		}
+		else {
+			this.scoops = scoops;
+		}
+	}
+	
+	public void setFlavor(String flavor)
+	{
 		
 		this.flavor = flavor;
-	}
-	
-	public void setScoops(int scoops) throws IceCreamConeException{
-		
-		this.scoops = scoops;
 	}
 
 }

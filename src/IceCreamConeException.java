@@ -1,31 +1,32 @@
 
-public class IceCreamConeException extends ConeException{
+public class IceCreamConeException extends Exception{
 	
 	String iceCreamCone;
 	int numOfscoops;
 	
-	public IceCreamConeException(String iceCreamCone, int numOfscoops) {
+	
+	public IceCreamConeException(int numOfscoops) {
 		
-		this.iceCreamCone = iceCreamCone;
-		this.numOfscoops = numOfscoops;
+		
+		if(numOfscoops > 3)
+		{
+			super.getMessage();
+		}
+	
 	
 	}
 	
-	public String geticeCreamConeStr(){
-		
-		return iceCreamCone;
-	}
-	
-	public int getnumScoops(){
-		
-		return numOfscoops;
-	}
 	
 	@Override
-	public String getMessage() {
+	public String getMessage(){
 		
-		super.getMessage(iceCreamCone);
-		return iceCreamCone;
+		String Message = "Sorry number of scoops is greater then three";
+		
+		return Message;
+		
 	}
+	
+	
+	
 
-}//
+}
