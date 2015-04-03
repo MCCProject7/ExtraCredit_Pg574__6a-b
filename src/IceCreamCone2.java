@@ -3,10 +3,11 @@ import java.util.Arrays;
 
 public class IceCreamCone2 {
 
-	String[] flav = {"Chocolate", "Vanilla", "Rainbow", "PeanutButter"};
+	public static String[] flav = {"Chocolate", "Vanilla", "Rainbow", "PeanutButter"};
 	
 	public IceCreamCone2(String flavor) throws IceCreamConeException
 	{
+		flavor.toLowerCase();
 		
 		if(Arrays.asList(flav).contains(flavor))
 		{
@@ -14,7 +15,7 @@ public class IceCreamCone2 {
 		}
 		else 
 		{
-			throw(new IceCreamConeException(flavor));
+			throw(new IceCreamConeException(flavor, IceCreamCone.getScoops()));
 		}
 		
 	}

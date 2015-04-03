@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class ThrowIceCream {
 
+	private static IceCreamCone icecream;
+
 	public static void main(String[] args) throws IceCreamConeException {
 		
 		Scanner key = new Scanner(System.in);
@@ -19,7 +21,7 @@ public class ThrowIceCream {
 		System.out.print("\nHow many scoops? :");
 		numScoops = key.nextInt();
 		
-		IceCreamCone icecream = new IceCreamCone(flav, numScoops);
+		icecream = new IceCreamCone(flav, numScoops);
 		
 		System.out.print("\n\nThank You");
 

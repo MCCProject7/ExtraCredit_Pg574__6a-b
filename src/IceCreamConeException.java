@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 
 public class IceCreamConeException extends Exception{
 	
@@ -5,41 +7,36 @@ public class IceCreamConeException extends Exception{
 	int numOfscoops;
 	
 	
-	public IceCreamConeException(int numOfscoops) {
-		
-		
-		if(numOfscoops > 3)
-		{
-			this.numOfscoops = numOfscoops;
-			super.getMessage();
-		}
-		
-		if(numOfscoops == 0)
-		{
-			String x = String.valueOf(this.numOfscoops);
-		}
 	
-	
-	}
-	
-	public IceCreamConeException(String iceCreamCone)
+	public IceCreamConeException(String iceCreamCone, int numOfscoops)
 	{
+		
+		this.numOfscoops = numOfscoops;
 		this.iceCreamCone = iceCreamCone;
-		super.getMessage();
+		getMessage();
 	}
 	
 	
 	@Override
-	public String getMessage(){
-		
+	public String getMessage()
+	{
 		String Message = null;
 		
-		if(numOfscoops !=0){
-		Message = "Sorry we can not do " + numOfscoops + " scoopss " +" or we do not carry " + iceCreamCone;
+		if(!Arrays.asList(IceCreamCone2.flav).contains(iceCreamCone) && numOfscoops > 3)
+		{
+			Message = "Sorry we cannot serve " + numOfscoops + " scoops " + "and we do not carry " + "\"" + iceCreamCone + "\""+  " flavor.";
 		}
+		else if(!Arrays.asList(IceCreamCone2.flav).contains(iceCreamCone))
+		{
+			Message = "Sorry we do not carry "+ "\"" + iceCreamCone + "\""+  " flavor.";
+		}
+		else if(numOfscoops > 3)
+		{
+			Message = "Sorry we cannot serve " + numOfscoops + " scoops.";
+		}
+			
 		
 		return Message;
-		
 	}
 	
 	
