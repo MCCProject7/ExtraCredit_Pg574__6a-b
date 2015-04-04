@@ -1,3 +1,6 @@
+/*ThrowIceCream created by Kyle Wolff and Brandon VanderMey Fri Apr 03 21:19:27 EDT 2015*/
+
+import java.util.Date;
 import java.util.Scanner;
 
 
@@ -12,7 +15,9 @@ public class ThrowIceCream {
 		String flav = null;
 		int numScoops = 0;
 		
-	
+		Date today = new Date();
+		
+		System.out.println("ThrowIceCream created by Kyle Wolff and Brandon VanderMey " + today);
 		
 		
 		System.out.print("What flavor would you like: ");
